@@ -1,0 +1,30 @@
+package v2
+
+import (
+	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
+)
+
+// Deprecated: This class is obsolete. Use AffiliatesCommissionProgramsItemWithCommission_program_PatchResponseable instead.
+type AffiliatesCommissionProgramsItemWithCommission_program_Response struct {
+	AffiliatesCommissionProgramsItemWithCommission_program_PatchResponse
+}
+
+// NewAffiliatesCommissionProgramsItemWithCommission_program_Response instantiates a new AffiliatesCommissionProgramsItemWithCommission_program_Response and sets the default values.
+func NewAffiliatesCommissionProgramsItemWithCommission_program_Response() *AffiliatesCommissionProgramsItemWithCommission_program_Response {
+	m := &AffiliatesCommissionProgramsItemWithCommission_program_Response{
+		AffiliatesCommissionProgramsItemWithCommission_program_PatchResponse: *NewAffiliatesCommissionProgramsItemWithCommission_program_PatchResponse(),
+	}
+	return m
+}
+
+// CreateAffiliatesCommissionProgramsItemWithCommission_program_ResponseFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
+// returns a Parsable when successful
+func CreateAffiliatesCommissionProgramsItemWithCommission_program_ResponseFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) (i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
+	return NewAffiliatesCommissionProgramsItemWithCommission_program_Response(), nil
+}
+
+// Deprecated: This class is obsolete. Use AffiliatesCommissionProgramsItemWithCommission_program_PatchResponseable instead.
+type AffiliatesCommissionProgramsItemWithCommission_program_Responseable interface {
+	AffiliatesCommissionProgramsItemWithCommission_program_PatchResponseable
+	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
+}

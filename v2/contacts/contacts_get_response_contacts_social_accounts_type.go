@@ -1,0 +1,56 @@
+package contacts
+
+import (
+	"errors"
+)
+
+type ContactsGetResponse_contacts_social_accounts_type int
+
+const (
+	SOCIAL_ACCOUNT_TYPE_UNSPECIFIED_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE ContactsGetResponse_contacts_social_accounts_type = iota
+	FACEBOOK_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	LINKED_IN_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	TWITTER_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	INSTAGRAM_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	SNAPCHAT_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	YOUTUBE_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	PINTEREST_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+)
+
+func (i ContactsGetResponse_contacts_social_accounts_type) String() string {
+	return []string{"SOCIAL_ACCOUNT_TYPE_UNSPECIFIED", "FACEBOOK", "LINKED_IN", "TWITTER", "INSTAGRAM", "SNAPCHAT", "YOUTUBE", "PINTEREST"}[i]
+}
+func ParseContactsGetResponse_contacts_social_accounts_type(v string) (any, error) {
+	result := SOCIAL_ACCOUNT_TYPE_UNSPECIFIED_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	switch v {
+	case "SOCIAL_ACCOUNT_TYPE_UNSPECIFIED":
+		result = SOCIAL_ACCOUNT_TYPE_UNSPECIFIED_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	case "FACEBOOK":
+		result = FACEBOOK_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	case "LINKED_IN":
+		result = LINKED_IN_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	case "TWITTER":
+		result = TWITTER_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	case "INSTAGRAM":
+		result = INSTAGRAM_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	case "SNAPCHAT":
+		result = SNAPCHAT_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	case "YOUTUBE":
+		result = YOUTUBE_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	case "PINTEREST":
+		result = PINTEREST_CONTACTSGETRESPONSE_CONTACTS_SOCIAL_ACCOUNTS_TYPE
+	default:
+		return 0, errors.New("Unknown ContactsGetResponse_contacts_social_accounts_type value: " + v)
+	}
+	return &result, nil
+}
+func SerializeContactsGetResponse_contacts_social_accounts_type(values []ContactsGetResponse_contacts_social_accounts_type) []string {
+	result := make([]string, len(values))
+	for i, v := range values {
+		result[i] = v.String()
+	}
+	return result
+}
+func (i ContactsGetResponse_contacts_social_accounts_type) isMultiValue() bool {
+	return false
+}

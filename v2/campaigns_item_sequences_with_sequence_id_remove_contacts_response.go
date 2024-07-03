@@ -1,0 +1,30 @@
+package v2
+
+import (
+	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
+)
+
+// Deprecated: This class is obsolete. Use CampaignsItemSequencesWithSequence_idRemoveContactsPostResponseable instead.
+type CampaignsItemSequencesWithSequence_idRemoveContactsResponse struct {
+	CampaignsItemSequencesWithSequence_idRemoveContactsPostResponse
+}
+
+// NewCampaignsItemSequencesWithSequence_idRemoveContactsResponse instantiates a new CampaignsItemSequencesWithSequence_idRemoveContactsResponse and sets the default values.
+func NewCampaignsItemSequencesWithSequence_idRemoveContactsResponse() *CampaignsItemSequencesWithSequence_idRemoveContactsResponse {
+	m := &CampaignsItemSequencesWithSequence_idRemoveContactsResponse{
+		CampaignsItemSequencesWithSequence_idRemoveContactsPostResponse: *NewCampaignsItemSequencesWithSequence_idRemoveContactsPostResponse(),
+	}
+	return m
+}
+
+// CreateCampaignsItemSequencesWithSequence_idRemoveContactsResponseFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
+// returns a Parsable when successful
+func CreateCampaignsItemSequencesWithSequence_idRemoveContactsResponseFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) (i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
+	return NewCampaignsItemSequencesWithSequence_idRemoveContactsResponse(), nil
+}
+
+// Deprecated: This class is obsolete. Use CampaignsItemSequencesWithSequence_idRemoveContactsPostResponseable instead.
+type CampaignsItemSequencesWithSequence_idRemoveContactsResponseable interface {
+	CampaignsItemSequencesWithSequence_idRemoveContactsPostResponseable
+	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
+}

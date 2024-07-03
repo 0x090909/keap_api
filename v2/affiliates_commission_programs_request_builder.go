@@ -1,0 +1,80 @@
+package v2
+
+import (
+	i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
+)
+
+// AffiliatesCommissionProgramsRequestBuilder builds and executes requests for operations under \v2\affiliates\commissionPrograms
+type AffiliatesCommissionProgramsRequestBuilder struct {
+	i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
+}
+
+// ByCommission_program_id gets an item from the keapapi.v2.affiliates.commissionPrograms.item collection
+// returns a *AffiliatesCommissionProgramsWithCommission_program_ItemRequestBuilder when successful
+func (m *AffiliatesCommissionProgramsRequestBuilder) ByCommission_program_id(commission_program_id string) *AffiliatesCommissionProgramsWithCommission_program_ItemRequestBuilder {
+	urlTplParams := make(map[string]string)
+	for idx, item := range m.BaseRequestBuilder.PathParameters {
+		urlTplParams[idx] = item
+	}
+	if commission_program_id != "" {
+		urlTplParams["commission_program_id"] = commission_program_id
+	}
+	return NewAffiliatesCommissionProgramsWithCommission_program_ItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
+}
+
+// NewAffiliatesCommissionProgramsRequestBuilderInternal instantiates a new AffiliatesCommissionProgramsRequestBuilder and sets the default values.
+func NewAffiliatesCommissionProgramsRequestBuilderInternal(pathParameters map[string]string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter) *AffiliatesCommissionProgramsRequestBuilder {
+	m := &AffiliatesCommissionProgramsRequestBuilder{
+		BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/v2/affiliates/commissionPrograms", pathParameters),
+	}
+	return m
+}
+
+// NewAffiliatesCommissionProgramsRequestBuilder instantiates a new AffiliatesCommissionProgramsRequestBuilder and sets the default values.
+func NewAffiliatesCommissionProgramsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter) *AffiliatesCommissionProgramsRequestBuilder {
+	urlParams := make(map[string]string)
+	urlParams["request-raw-url"] = rawUrl
+	return NewAffiliatesCommissionProgramsRequestBuilderInternal(urlParams, requestAdapter)
+}
+
+// DefaultCommissionProgram the defaultCommissionProgram property
+// returns a *AffiliatesCommissionProgramsDefaultCommissionProgramRequestBuilder when successful
+func (m *AffiliatesCommissionProgramsRequestBuilder) DefaultCommissionProgram() *AffiliatesCommissionProgramsDefaultCommissionProgramRequestBuilder {
+	return NewAffiliatesCommissionProgramsDefaultCommissionProgramRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}
+
+// DefaultCommissionPrograms the defaultCommissionPrograms property
+// returns a *AffiliatesCommissionProgramsDefaultCommissionProgramsRequestBuilder when successful
+func (m *AffiliatesCommissionProgramsRequestBuilder) DefaultCommissionPrograms() *AffiliatesCommissionProgramsDefaultCommissionProgramsRequestBuilder {
+	return NewAffiliatesCommissionProgramsDefaultCommissionProgramsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}
+
+// ProductCommissionProgram the productCommissionProgram property
+// returns a *AffiliatesCommissionProgramsProductCommissionProgramRequestBuilder when successful
+func (m *AffiliatesCommissionProgramsRequestBuilder) ProductCommissionProgram() *AffiliatesCommissionProgramsProductCommissionProgramRequestBuilder {
+	return NewAffiliatesCommissionProgramsProductCommissionProgramRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}
+
+// ProductCommissionPrograms the productCommissionPrograms property
+// returns a *AffiliatesCommissionProgramsProductCommissionProgramsRequestBuilder when successful
+func (m *AffiliatesCommissionProgramsRequestBuilder) ProductCommissionPrograms() *AffiliatesCommissionProgramsProductCommissionProgramsRequestBuilder {
+	return NewAffiliatesCommissionProgramsProductCommissionProgramsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}
+
+// SubscriptionCommissionProgram the subscriptionCommissionProgram property
+// returns a *AffiliatesCommissionProgramsSubscriptionCommissionProgramRequestBuilder when successful
+func (m *AffiliatesCommissionProgramsRequestBuilder) SubscriptionCommissionProgram() *AffiliatesCommissionProgramsSubscriptionCommissionProgramRequestBuilder {
+	return NewAffiliatesCommissionProgramsSubscriptionCommissionProgramRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}
+
+// SubscriptionCommissionPrograms the subscriptionCommissionPrograms property
+// returns a *AffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder when successful
+func (m *AffiliatesCommissionProgramsRequestBuilder) SubscriptionCommissionPrograms() *AffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder {
+	return NewAffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}
+
+// WithCommission_idRemoveSubscriptionCommission builds and executes requests for operations under \v2\affiliates\commissionPrograms\{commission_id}:removeSubscriptionCommission
+// returns a *AffiliatesCommissionProgramsWithCommission_idRemoveSubscriptionCommissionRequestBuilder when successful
+func (m *AffiliatesCommissionProgramsRequestBuilder) WithCommission_idRemoveSubscriptionCommission() *AffiliatesCommissionProgramsWithCommission_idRemoveSubscriptionCommissionRequestBuilder {
+	return NewAffiliatesCommissionProgramsWithCommission_idRemoveSubscriptionCommissionRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}

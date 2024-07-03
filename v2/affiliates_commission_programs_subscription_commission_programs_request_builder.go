@@ -1,0 +1,38 @@
+package v2
+
+import (
+	i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
+)
+
+// AffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder builds and executes requests for operations under \v2\affiliates\commissionPrograms\subscriptionCommissionPrograms
+type AffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder struct {
+	i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
+}
+
+// ByCommission_program_id gets an item from the keapapi.v2.affiliates.commissionPrograms.subscriptionCommissionPrograms.item collection
+// returns a *AffiliatesCommissionProgramsSubscriptionCommissionProgramsWithCommission_program_ItemRequestBuilder when successful
+func (m *AffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder) ByCommission_program_id(commission_program_id string) *AffiliatesCommissionProgramsSubscriptionCommissionProgramsWithCommission_program_ItemRequestBuilder {
+	urlTplParams := make(map[string]string)
+	for idx, item := range m.BaseRequestBuilder.PathParameters {
+		urlTplParams[idx] = item
+	}
+	if commission_program_id != "" {
+		urlTplParams["commission_program_id"] = commission_program_id
+	}
+	return NewAffiliatesCommissionProgramsSubscriptionCommissionProgramsWithCommission_program_ItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
+}
+
+// NewAffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilderInternal instantiates a new AffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder and sets the default values.
+func NewAffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilderInternal(pathParameters map[string]string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter) *AffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder {
+	m := &AffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder{
+		BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/v2/affiliates/commissionPrograms/subscriptionCommissionPrograms", pathParameters),
+	}
+	return m
+}
+
+// NewAffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder instantiates a new AffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder and sets the default values.
+func NewAffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter) *AffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder {
+	urlParams := make(map[string]string)
+	urlParams["request-raw-url"] = rawUrl
+	return NewAffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilderInternal(urlParams, requestAdapter)
+}
