@@ -18,7 +18,7 @@ type AffiliatesRequestBuilderPostRequestConfiguration struct {
 	Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
 }
 
-// ByAffiliate_idId gets an item from the keapapi.v2.affiliates.item collection
+// ByAffiliate_idId gets an item from the github.com/0x090909/keap_api.v2.affiliates.item collection
 // returns a *AffiliatesAffiliate_idItemRequestBuilder when successful
 func (m *AffiliatesRequestBuilder) ByAffiliate_idId(affiliate_idId string) *AffiliatesAffiliate_idItemRequestBuilder {
 	urlTplParams := make(map[string]string)

@@ -9,7 +9,7 @@ type TasksRequestBuilder struct {
 	i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
 
-// ByTask_id gets an item from the keapapi.v2.tasks.item collection
+// ByTask_id gets an item from the github.com/0x090909/keap_api.v2.tasks.item collection
 // returns a *TasksWithTask_ItemRequestBuilder when successful
 func (m *TasksRequestBuilder) ByTask_id(task_id string) *TasksWithTask_ItemRequestBuilder {
 	urlTplParams := make(map[string]string)

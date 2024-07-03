@@ -1,15 +1,15 @@
 package v2
 
 import (
+	ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff "github.com/0x090909/keap_api/models"
 	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
-	ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751 "keapapi/models"
 )
 
 type SettingsApplicationsGetConfiguration404Error_suppressed struct {
 	// Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
 	additionalData map[string]any
 	// The cause property
-	cause ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable
+	cause ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable
 	// The localizedMessage property
 	localizedMessage *string
 	// The message property
@@ -17,7 +17,7 @@ type SettingsApplicationsGetConfiguration404Error_suppressed struct {
 	// The stackTrace property
 	stackTrace []SettingsApplicationsGetConfiguration404Error_suppressed_stackTraceable
 	// The suppressed property
-	suppressed []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable
+	suppressed []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable
 }
 
 // NewSettingsApplicationsGetConfiguration404Error_suppressed instantiates a new SettingsApplicationsGetConfiguration404Error_suppressed and sets the default values.
@@ -41,7 +41,7 @@ func (m *SettingsApplicationsGetConfiguration404Error_suppressed) GetAdditionalD
 
 // GetCause gets the cause property value. The cause property
 // returns a Throwableable when successful
-func (m *SettingsApplicationsGetConfiguration404Error_suppressed) GetCause() ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable {
+func (m *SettingsApplicationsGetConfiguration404Error_suppressed) GetCause() ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable {
 	return m.cause
 }
 
@@ -50,12 +50,12 @@ func (m *SettingsApplicationsGetConfiguration404Error_suppressed) GetCause() ia9
 func (m *SettingsApplicationsGetConfiguration404Error_suppressed) GetFieldDeserializers() map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
 	res := make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error)
 	res["cause"] = func(n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
-		val, err := n.GetObjectValue(ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.CreateThrowableFromDiscriminatorValue)
+		val, err := n.GetObjectValue(ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.CreateThrowableFromDiscriminatorValue)
 		if err != nil {
 			return err
 		}
 		if val != nil {
-			m.SetCause(val.(ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable))
+			m.SetCause(val.(ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable))
 		}
 		return nil
 	}
@@ -96,15 +96,15 @@ func (m *SettingsApplicationsGetConfiguration404Error_suppressed) GetFieldDeseri
 		return nil
 	}
 	res["suppressed"] = func(n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
-		val, err := n.GetCollectionOfObjectValues(ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.CreateThrowableFromDiscriminatorValue)
+		val, err := n.GetCollectionOfObjectValues(ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.CreateThrowableFromDiscriminatorValue)
 		if err != nil {
 			return err
 		}
 		if val != nil {
-			res := make([]ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable, len(val))
+			res := make([]ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable, len(val))
 			for i, v := range val {
 				if v != nil {
-					res[i] = v.(ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable)
+					res[i] = v.(ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable)
 				}
 			}
 			m.SetSuppressed(res)
@@ -134,7 +134,7 @@ func (m *SettingsApplicationsGetConfiguration404Error_suppressed) GetStackTrace(
 
 // GetSuppressed gets the suppressed property value. The suppressed property
 // returns a []Throwableable when successful
-func (m *SettingsApplicationsGetConfiguration404Error_suppressed) GetSuppressed() []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable {
+func (m *SettingsApplicationsGetConfiguration404Error_suppressed) GetSuppressed() []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable {
 	return m.suppressed
 }
 
@@ -197,7 +197,7 @@ func (m *SettingsApplicationsGetConfiguration404Error_suppressed) SetAdditionalD
 }
 
 // SetCause sets the cause property value. The cause property
-func (m *SettingsApplicationsGetConfiguration404Error_suppressed) SetCause(value ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable) {
+func (m *SettingsApplicationsGetConfiguration404Error_suppressed) SetCause(value ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable) {
 	m.cause = value
 }
 
@@ -217,21 +217,21 @@ func (m *SettingsApplicationsGetConfiguration404Error_suppressed) SetStackTrace(
 }
 
 // SetSuppressed sets the suppressed property value. The suppressed property
-func (m *SettingsApplicationsGetConfiguration404Error_suppressed) SetSuppressed(value []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable) {
+func (m *SettingsApplicationsGetConfiguration404Error_suppressed) SetSuppressed(value []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable) {
 	m.suppressed = value
 }
 
 type SettingsApplicationsGetConfiguration404Error_suppressedable interface {
 	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
 	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-	GetCause() ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable
+	GetCause() ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable
 	GetLocalizedMessage() *string
 	GetMessage() *string
 	GetStackTrace() []SettingsApplicationsGetConfiguration404Error_suppressed_stackTraceable
-	GetSuppressed() []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable
-	SetCause(value ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable)
+	GetSuppressed() []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable
+	SetCause(value ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable)
 	SetLocalizedMessage(value *string)
 	SetMessage(value *string)
 	SetStackTrace(value []SettingsApplicationsGetConfiguration404Error_suppressed_stackTraceable)
-	SetSuppressed(value []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable)
+	SetSuppressed(value []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable)
 }

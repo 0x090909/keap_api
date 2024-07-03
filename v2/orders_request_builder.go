@@ -10,7 +10,7 @@ type OrdersRequestBuilder struct {
 	i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
 
-// ByOrder_id gets an item from the keapapi.v2.orders.item collection
+// ByOrder_id gets an item from the github.com/0x090909/keap_api.v2.orders.item collection
 // Deprecated: This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.
 // returns a *OrdersWithOrder_ItemRequestBuilder when successful
 func (m *OrdersRequestBuilder) ByOrder_id(order_id string) *OrdersWithOrder_ItemRequestBuilder {
@@ -24,7 +24,7 @@ func (m *OrdersRequestBuilder) ByOrder_id(order_id string) *OrdersWithOrder_Item
 	return NewOrdersWithOrder_ItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
 }
 
-// ByOrder_idInt64 gets an item from the keapapi.v2.orders.item collection
+// ByOrder_idInt64 gets an item from the github.com/0x090909/keap_api.v2.orders.item collection
 // returns a *OrdersWithOrder_ItemRequestBuilder when successful
 func (m *OrdersRequestBuilder) ByOrder_idInt64(order_id int64) *OrdersWithOrder_ItemRequestBuilder {
 	urlTplParams := make(map[string]string)

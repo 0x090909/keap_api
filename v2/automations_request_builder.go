@@ -49,7 +49,7 @@ type AutomationsRequestBuilderGetRequestConfiguration struct {
 	QueryParameters *AutomationsRequestBuilderGetQueryParameters
 }
 
-// ByAutomation_id gets an item from the keapapi.v2.automations.item collection
+// ByAutomation_id gets an item from the github.com/0x090909/keap_api.v2.automations.item collection
 // returns a *AutomationsWithAutomation_ItemRequestBuilder when successful
 func (m *AutomationsRequestBuilder) ByAutomation_id(automation_id string) *AutomationsWithAutomation_ItemRequestBuilder {
 	urlTplParams := make(map[string]string)

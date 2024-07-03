@@ -2,8 +2,8 @@ package v2
 
 import (
 	"context"
+	i6c05cc2e03524da0fd5934fe2ac36bba238943fa63d1be33d8769580d294da4a "github.com/0x090909/keap_api/v2/contacts/links/types"
 	i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-	i9edf83f72ac1f6531e56a527261f962399e7ce3801df9a820ead823d40786995 "keapapi/v2/contacts/links/types"
 )
 
 // ContactsLinksTypesRequestBuilder builds and executes requests for operations under \v2\contacts\links\types
@@ -17,7 +17,7 @@ type ContactsLinksTypesRequestBuilderGetQueryParameters struct {
 	// Deprecated: This property is deprecated, use FilterAsGetFilterQueryParameterType instead
 	Filter *string `uriparametername:"filter"`
 	// Search filter to apply to results. Formatted as (unencoded) ?filter=name==expectedValue
-	FilterAsGetFilterQueryParameterType *i9edf83f72ac1f6531e56a527261f962399e7ce3801df9a820ead823d40786995.GetFilterQueryParameterType `uriparametername:"filter"`
+	FilterAsGetFilterQueryParameterType *i6c05cc2e03524da0fd5934fe2ac36bba238943fa63d1be33d8769580d294da4a.GetFilterQueryParameterType `uriparametername:"filter"`
 	OrderBy                             *string                                                                                        `uriparametername:"orderBy"`
 	PageSize                            *int32                                                                                         `uriparametername:"pageSize"`
 	PageToken                           *string                                                                                        `uriparametername:"pageToken"`

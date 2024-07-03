@@ -9,7 +9,7 @@ type LocalesCountriesRequestBuilder struct {
 	i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
 
-// ByCountry_code gets an item from the keapapi.v2.locales.countries.item collection
+// ByCountry_code gets an item from the github.com/0x090909/keap_api.v2.locales.countries.item collection
 // returns a *LocalesCountriesWithCountry_codeItemRequestBuilder when successful
 func (m *LocalesCountriesRequestBuilder) ByCountry_code(country_code string) *LocalesCountriesWithCountry_codeItemRequestBuilder {
 	urlTplParams := make(map[string]string)

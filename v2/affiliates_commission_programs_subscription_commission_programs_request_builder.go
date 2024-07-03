@@ -9,7 +9,7 @@ type AffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder st
 	i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
 
-// ByCommission_program_id gets an item from the keapapi.v2.affiliates.commissionPrograms.subscriptionCommissionPrograms.item collection
+// ByCommission_program_id gets an item from the github.com/0x090909/keap_api.v2.affiliates.commissionPrograms.subscriptionCommissionPrograms.item collection
 // returns a *AffiliatesCommissionProgramsSubscriptionCommissionProgramsWithCommission_program_ItemRequestBuilder when successful
 func (m *AffiliatesCommissionProgramsSubscriptionCommissionProgramsRequestBuilder) ByCommission_program_id(commission_program_id string) *AffiliatesCommissionProgramsSubscriptionCommissionProgramsWithCommission_program_ItemRequestBuilder {
 	urlTplParams := make(map[string]string)

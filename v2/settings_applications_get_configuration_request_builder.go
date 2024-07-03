@@ -2,8 +2,8 @@ package v2
 
 import (
 	"context"
+	i846d387509a871432470fd2519b02c544039b9aa735d0df68b50ec2a925bfc4d "github.com/0x090909/keap_api/v2/settings/applicationsgetconfiguration"
 	i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-	i718c05a74102a917dcb5d1b3c11debed2a54df2782be8906687e81514800fee7 "keapapi/v2/settings/applicationsgetconfiguration"
 )
 
 // SettingsApplicationsGetConfigurationRequestBuilder builds and executes requests for operations under \v2\settings\applications:getConfiguration
@@ -17,7 +17,7 @@ type SettingsApplicationsGetConfigurationRequestBuilderGetQueryParameters struct
 	// Deprecated: This property is deprecated, use FieldsAsGetFieldsQueryParameterType instead
 	Fields []string `uriparametername:"fields"`
 	// By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
-	FieldsAsGetFieldsQueryParameterType []i718c05a74102a917dcb5d1b3c11debed2a54df2782be8906687e81514800fee7.GetFieldsQueryParameterType `uriparametername:"fields"`
+	FieldsAsGetFieldsQueryParameterType []i846d387509a871432470fd2519b02c544039b9aa735d0df68b50ec2a925bfc4d.GetFieldsQueryParameterType `uriparametername:"fields"`
 }
 
 // SettingsApplicationsGetConfigurationRequestBuilderGetRequestConfiguration configuration for the request such as headers, query parameters, and middleware options.

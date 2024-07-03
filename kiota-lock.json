@@ -4,7 +4,7 @@
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.13.0",
   "clientClassName": "KeapClient",
-  "clientNamespaceName": "keapapi",
+  "clientNamespaceName": "github.com/0x090909/keap_api",
   "language": "Go",
   "usesBackingStore": false,
   "excludeBackwardCompatible": false,

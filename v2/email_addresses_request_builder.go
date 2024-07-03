@@ -9,7 +9,7 @@ type EmailAddressesRequestBuilder struct {
 	i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
 
-// ByEmail gets an item from the keapapi.v2.emailAddresses.item collection
+// ByEmail gets an item from the github.com/0x090909/keap_api.v2.emailAddresses.item collection
 // returns a *EmailAddressesWithEmailItemRequestBuilder when successful
 func (m *EmailAddressesRequestBuilder) ByEmail(email string) *EmailAddressesWithEmailItemRequestBuilder {
 	urlTplParams := make(map[string]string)

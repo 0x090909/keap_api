@@ -1,15 +1,15 @@
 package v2
 
 import (
+	ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff "github.com/0x090909/keap_api/models"
 	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
-	ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751 "keapapi/models"
 )
 
 type Contacts403Error_suppressed struct {
 	// Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
 	additionalData map[string]any
 	// The cause property
-	cause ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable
+	cause ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable
 	// The localizedMessage property
 	localizedMessage *string
 	// The message property
@@ -17,7 +17,7 @@ type Contacts403Error_suppressed struct {
 	// The stackTrace property
 	stackTrace []Contacts403Error_suppressed_stackTraceable
 	// The suppressed property
-	suppressed []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable
+	suppressed []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable
 }
 
 // NewContacts403Error_suppressed instantiates a new Contacts403Error_suppressed and sets the default values.
@@ -41,7 +41,7 @@ func (m *Contacts403Error_suppressed) GetAdditionalData() map[string]any {
 
 // GetCause gets the cause property value. The cause property
 // returns a Throwableable when successful
-func (m *Contacts403Error_suppressed) GetCause() ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable {
+func (m *Contacts403Error_suppressed) GetCause() ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable {
 	return m.cause
 }
 
@@ -50,12 +50,12 @@ func (m *Contacts403Error_suppressed) GetCause() ia90dd1409a2ba05682b4d7b08237e4
 func (m *Contacts403Error_suppressed) GetFieldDeserializers() map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
 	res := make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error)
 	res["cause"] = func(n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
-		val, err := n.GetObjectValue(ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.CreateThrowableFromDiscriminatorValue)
+		val, err := n.GetObjectValue(ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.CreateThrowableFromDiscriminatorValue)
 		if err != nil {
 			return err
 		}
 		if val != nil {
-			m.SetCause(val.(ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable))
+			m.SetCause(val.(ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable))
 		}
 		return nil
 	}
@@ -96,15 +96,15 @@ func (m *Contacts403Error_suppressed) GetFieldDeserializers() map[string]func(i8
 		return nil
 	}
 	res["suppressed"] = func(n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
-		val, err := n.GetCollectionOfObjectValues(ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.CreateThrowableFromDiscriminatorValue)
+		val, err := n.GetCollectionOfObjectValues(ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.CreateThrowableFromDiscriminatorValue)
 		if err != nil {
 			return err
 		}
 		if val != nil {
-			res := make([]ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable, len(val))
+			res := make([]ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable, len(val))
 			for i, v := range val {
 				if v != nil {
-					res[i] = v.(ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable)
+					res[i] = v.(ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable)
 				}
 			}
 			m.SetSuppressed(res)
@@ -134,7 +134,7 @@ func (m *Contacts403Error_suppressed) GetStackTrace() []Contacts403Error_suppres
 
 // GetSuppressed gets the suppressed property value. The suppressed property
 // returns a []Throwableable when successful
-func (m *Contacts403Error_suppressed) GetSuppressed() []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable {
+func (m *Contacts403Error_suppressed) GetSuppressed() []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable {
 	return m.suppressed
 }
 
@@ -197,7 +197,7 @@ func (m *Contacts403Error_suppressed) SetAdditionalData(value map[string]any) {
 }
 
 // SetCause sets the cause property value. The cause property
-func (m *Contacts403Error_suppressed) SetCause(value ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable) {
+func (m *Contacts403Error_suppressed) SetCause(value ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable) {
 	m.cause = value
 }
 
@@ -217,21 +217,21 @@ func (m *Contacts403Error_suppressed) SetStackTrace(value []Contacts403Error_sup
 }
 
 // SetSuppressed sets the suppressed property value. The suppressed property
-func (m *Contacts403Error_suppressed) SetSuppressed(value []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable) {
+func (m *Contacts403Error_suppressed) SetSuppressed(value []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable) {
 	m.suppressed = value
 }
 
 type Contacts403Error_suppressedable interface {
 	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
 	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-	GetCause() ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable
+	GetCause() ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable
 	GetLocalizedMessage() *string
 	GetMessage() *string
 	GetStackTrace() []Contacts403Error_suppressed_stackTraceable
-	GetSuppressed() []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable
-	SetCause(value ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable)
+	GetSuppressed() []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable
+	SetCause(value ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable)
 	SetLocalizedMessage(value *string)
 	SetMessage(value *string)
 	SetStackTrace(value []Contacts403Error_suppressed_stackTraceable)
-	SetSuppressed(value []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.Throwableable)
+	SetSuppressed(value []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.Throwableable)
 }

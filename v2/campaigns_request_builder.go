@@ -33,7 +33,7 @@ type CampaignsRequestBuilderGetRequestConfiguration struct {
 	QueryParameters *CampaignsRequestBuilderGetQueryParameters
 }
 
-// ByCampaign_id gets an item from the keapapi.v2.campaigns.item collection
+// ByCampaign_id gets an item from the github.com/0x090909/keap_api.v2.campaigns.item collection
 // returns a *CampaignsWithCampaign_ItemRequestBuilder when successful
 func (m *CampaignsRequestBuilder) ByCampaign_id(campaign_id string) *CampaignsWithCampaign_ItemRequestBuilder {
 	urlTplParams := make(map[string]string)

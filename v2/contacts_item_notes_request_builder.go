@@ -40,7 +40,7 @@ type ContactsItemNotesRequestBuilderPostRequestConfiguration struct {
 	Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
 }
 
-// ByNote_id gets an item from the keapapi.v2.contacts.item.notes.item collection
+// ByNote_id gets an item from the github.com/0x090909/keap_api.v2.contacts.item.notes.item collection
 // returns a *ContactsItemNotesWithNote_ItemRequestBuilder when successful
 func (m *ContactsItemNotesRequestBuilder) ByNote_id(note_id string) *ContactsItemNotesWithNote_ItemRequestBuilder {
 	urlTplParams := make(map[string]string)

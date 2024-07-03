@@ -1,8 +1,8 @@
 package v2
 
 import (
+	ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff "github.com/0x090909/keap_api/models"
 	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
-	ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751 "keapapi/models"
 )
 
 type ContactsModelGetResponse_custom_fields_options struct {
@@ -13,7 +13,7 @@ type ContactsModelGetResponse_custom_fields_options struct {
 	// The label property
 	label *string
 	// The options property
-	options []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.CustomFieldOptionable
+	options []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.CustomFieldOptionable
 }
 
 // NewContactsModelGetResponse_custom_fields_options instantiates a new ContactsModelGetResponse_custom_fields_options and sets the default values.
@@ -60,15 +60,15 @@ func (m *ContactsModelGetResponse_custom_fields_options) GetFieldDeserializers()
 		return nil
 	}
 	res["options"] = func(n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
-		val, err := n.GetCollectionOfObjectValues(ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.CreateCustomFieldOptionFromDiscriminatorValue)
+		val, err := n.GetCollectionOfObjectValues(ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.CreateCustomFieldOptionFromDiscriminatorValue)
 		if err != nil {
 			return err
 		}
 		if val != nil {
-			res := make([]ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.CustomFieldOptionable, len(val))
+			res := make([]ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.CustomFieldOptionable, len(val))
 			for i, v := range val {
 				if v != nil {
-					res[i] = v.(ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.CustomFieldOptionable)
+					res[i] = v.(ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.CustomFieldOptionable)
 				}
 			}
 			m.SetOptions(res)
@@ -92,7 +92,7 @@ func (m *ContactsModelGetResponse_custom_fields_options) GetLabel() *string {
 
 // GetOptions gets the options property value. The options property
 // returns a []CustomFieldOptionable when successful
-func (m *ContactsModelGetResponse_custom_fields_options) GetOptions() []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.CustomFieldOptionable {
+func (m *ContactsModelGetResponse_custom_fields_options) GetOptions() []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.CustomFieldOptionable {
 	return m.options
 }
 
@@ -147,7 +147,7 @@ func (m *ContactsModelGetResponse_custom_fields_options) SetLabel(value *string)
 }
 
 // SetOptions sets the options property value. The options property
-func (m *ContactsModelGetResponse_custom_fields_options) SetOptions(value []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.CustomFieldOptionable) {
+func (m *ContactsModelGetResponse_custom_fields_options) SetOptions(value []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.CustomFieldOptionable) {
 	m.options = value
 }
 
@@ -156,8 +156,8 @@ type ContactsModelGetResponse_custom_fields_optionsable interface {
 	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
 	GetId() *string
 	GetLabel() *string
-	GetOptions() []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.CustomFieldOptionable
+	GetOptions() []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.CustomFieldOptionable
 	SetId(value *string)
 	SetLabel(value *string)
-	SetOptions(value []ia90dd1409a2ba05682b4d7b08237e40a27cab9440e9a81b916d31aca6dbec751.CustomFieldOptionable)
+	SetOptions(value []ic811111da47f7c5d6f6d121f0e78585ed7060c3db2cbfa4a5d929d3a72d517ff.CustomFieldOptionable)
 }
