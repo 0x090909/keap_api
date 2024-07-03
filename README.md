@@ -36,12 +36,40 @@ import "github.com/0x090909/keap_api"
 package main
 
 import (
+	"context"
 	"fmt"
+	"github.com/0x090909/keap_api"
+	v2 "github.com/0x090909/keap_api/v2"
+	auth "github.com/microsoft/kiota-abstractions-go/authentication"
+	http "github.com/microsoft/kiota-http-go"
+	log "github.com/sirupsen/logrus"
 )
 
 func main() {
-	 
+
+	// API requires no authentication, so use the anonymous
+	authProvider, _ := auth.NewApiKeyAuthenticationProvider(
+		"YOUR_API",
+		"X-Keap-API-Key",
+		auth.HEADER_KEYLOCATION)
+	// Create request adapter using the net/http-based implementation
+	adapter, err := http.NewNetHttpRequestAdapter(authProvider)
+	if err != nil {
+		log.Fatalf("Error creating request adapter: %v\n", err)
+	}
+
+	if err != nil {
+		fmt.Printf("Error creating request adapter: %v\n", err)
+	}
+
+	myKeapClient := keap_api.NewKeapClient(adapter)
+
+	contacts, _ := myKeapClient.V2().Contacts().Get(context.Background(), &v2.ContactsRequestBuilderGetRequestConfiguration{})
+	for _, contact := range contacts.GetContacts() {
+		log.Info(*contact.GetGivenName())
+	}
 }
+
 ```
 
 ## Contributing
