@@ -1,8 +1,8 @@
-# Keap API Go Library
+# Keap API V2 Go Library
 
 ## Overview
 
-Keap bindings api
+Keap bindings for REST v2 API in golang
 
 ## Features
 
@@ -20,7 +20,7 @@ go get github.com/0x090909/keap_api
 
 ## Usage
 
-Below is an example of how to use the Simple Template library:
+Below is an example of how to use the Keap API:
 
 ### Basic Usage
 
@@ -30,7 +30,7 @@ Below is an example of how to use the Simple Template library:
 import "github.com/0x090909/keap_api"
 ```
 
-2. Create a new template and replace placeholders with actual values:
+2. Create a new file and replace placeholders with actual values:
 
 ```go
 package main
