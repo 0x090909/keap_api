@@ -4,7 +4,6 @@ import (
 	"context"
 	i5d514860bbee9da2d4c2a51dfefb536627322519e091b28af40f7e6aa46ccf41 "github.com/0x090909/keap_api/v1/orders"
 	i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-	log "github.com/sirupsen/logrus"
 	i53ac87e8cb3cc9276228f74d38694a208cacb99bb8ceb705eeae99fb88d4d274 "strconv"
 )
 
@@ -168,11 +167,9 @@ func (m *OrdersRequestBuilder) Post(ctx context.Context, body OrdersPostRequestB
 	}
 	res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, CreateOrdersResponseFromDiscriminatorValue, errorMapping)
 	if err != nil {
-		log.Error(res)
 		return nil, err
 	}
 	if res == nil {
-		log.Error(res)
 		return nil, nil
 	}
 	return res.(OrdersResponseable), nil
