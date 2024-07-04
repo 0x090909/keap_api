@@ -2,7 +2,6 @@ package v1
 
 import (
 	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
-	i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e "time"
 )
 
 type OrdersPostRequestBody struct {
@@ -307,7 +306,7 @@ type OrdersPostRequestBodyable interface {
 	i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
 	GetContactId() *int64
 	GetLeadAffiliateId() *int64
-	GetOrderDate() *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time
+	GetOrderDate() *string
 	GetOrderItems() []OrdersPostRequestBody_order_itemsable
 	GetOrderTitle() *string
 	GetPromoCodes() []string
@@ -315,7 +314,7 @@ type OrdersPostRequestBodyable interface {
 	GetShippingAddress() OrdersPostRequestBody_shipping_addressable
 	SetContactId(value *int64)
 	SetLeadAffiliateId(value *int64)
-	SetOrderDate(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)
+	SetOrderDate(value *string)
 	SetOrderItems(value []OrdersPostRequestBody_order_itemsable)
 	SetOrderTitle(value *string)
 	SetPromoCodes(value []string)
