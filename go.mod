@@ -1,4 +1,4 @@
-module github.com/0x090909/keap_api
+module github.com/0x090909/keap_api/v1.0.0
 
 go 1.22
 
