@@ -9,6 +9,7 @@ require (
 	github.com/microsoft/kiota-serialization-json-go v1.0.7
 	github.com/microsoft/kiota-serialization-multipart-go v1.0.0
 	github.com/microsoft/kiota-serialization-text-go v1.0.0
+	github.com/sirupsen/logrus v1.9.3
 )
 
 require (
@@ -17,7 +18,6 @@ require (
 	github.com/go-logr/logr v1.4.1 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/std-uritemplate/std-uritemplate/go v0.0.55 // indirect
 	github.com/stretchr/testify v1.9.0 // indirect
 	go.opentelemetry.io/otel v1.24.0 // indirect
