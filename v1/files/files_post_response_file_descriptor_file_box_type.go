@@ -1,0 +1,80 @@
+package files
+
+import (
+	"errors"
+)
+
+type FilesPostResponse_file_descriptor_file_box_type int
+
+const (
+	APPLICATION_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE FilesPostResponse_file_descriptor_file_box_type = iota
+	IMAGE_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	FAX_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	ATTACHMENT_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	TICKET_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	CONTACT_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	DIGITALPRODUCT_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	IMPORT_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	HIDDEN_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	WEBFORM_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	STYLEDCART_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	RESAMPLEDIMAGE_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	TEMPLATETHUMBNAIL_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	FUNNEL_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	LOGOTHUMBNAIL_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	UNLAYER_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+)
+
+func (i FilesPostResponse_file_descriptor_file_box_type) String() string {
+	return []string{"Application", "Image", "Fax", "Attachment", "Ticket", "Contact", "DigitalProduct", "Import", "Hidden", "WebForm", "StyledCart", "ReSampledImage", "TemplateThumbnail", "Funnel", "LogoThumbnail", "Unlayer"}[i]
+}
+func ParseFilesPostResponse_file_descriptor_file_box_type(v string) (any, error) {
+	result := APPLICATION_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	switch v {
+	case "Application":
+		result = APPLICATION_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "Image":
+		result = IMAGE_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "Fax":
+		result = FAX_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "Attachment":
+		result = ATTACHMENT_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "Ticket":
+		result = TICKET_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "Contact":
+		result = CONTACT_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "DigitalProduct":
+		result = DIGITALPRODUCT_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "Import":
+		result = IMPORT_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "Hidden":
+		result = HIDDEN_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "WebForm":
+		result = WEBFORM_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "StyledCart":
+		result = STYLEDCART_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "ReSampledImage":
+		result = RESAMPLEDIMAGE_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "TemplateThumbnail":
+		result = TEMPLATETHUMBNAIL_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "Funnel":
+		result = FUNNEL_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "LogoThumbnail":
+		result = LOGOTHUMBNAIL_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	case "Unlayer":
+		result = UNLAYER_FILESPOSTRESPONSE_FILE_DESCRIPTOR_FILE_BOX_TYPE
+	default:
+		return 0, errors.New("Unknown FilesPostResponse_file_descriptor_file_box_type value: " + v)
+	}
+	return &result, nil
+}
+func SerializeFilesPostResponse_file_descriptor_file_box_type(values []FilesPostResponse_file_descriptor_file_box_type) []string {
+	result := make([]string, len(values))
+	for i, v := range values {
+		result[i] = v.String()
+	}
+	return result
+}
+func (i FilesPostResponse_file_descriptor_file_box_type) isMultiValue() bool {
+	return false
+}

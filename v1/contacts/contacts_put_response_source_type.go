@@ -1,0 +1,65 @@
+package contacts
+
+import (
+	"errors"
+)
+
+type ContactsPutResponse_source_type int
+
+const (
+	APPOINTMENT_CONTACTSPUTRESPONSE_SOURCE_TYPE ContactsPutResponse_source_type = iota
+	FORMAPIHOSTED_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	FORMAPIINTERNAL_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	WEBFORM_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	INTERNALFORM_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	LANDINGPAGE_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	IMPORT_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	MANUAL_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	API_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	OTHER_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	UNKNOWN_CONTACTSPUTRESPONSE_SOURCE_TYPE
+)
+
+func (i ContactsPutResponse_source_type) String() string {
+	return []string{"APPOINTMENT", "FORMAPIHOSTED", "FORMAPIINTERNAL", "WEBFORM", "INTERNALFORM", "LANDINGPAGE", "IMPORT", "MANUAL", "API", "OTHER", "UNKNOWN"}[i]
+}
+func ParseContactsPutResponse_source_type(v string) (any, error) {
+	result := APPOINTMENT_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	switch v {
+	case "APPOINTMENT":
+		result = APPOINTMENT_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	case "FORMAPIHOSTED":
+		result = FORMAPIHOSTED_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	case "FORMAPIINTERNAL":
+		result = FORMAPIINTERNAL_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	case "WEBFORM":
+		result = WEBFORM_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	case "INTERNALFORM":
+		result = INTERNALFORM_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	case "LANDINGPAGE":
+		result = LANDINGPAGE_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	case "IMPORT":
+		result = IMPORT_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	case "MANUAL":
+		result = MANUAL_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	case "API":
+		result = API_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	case "OTHER":
+		result = OTHER_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	case "UNKNOWN":
+		result = UNKNOWN_CONTACTSPUTRESPONSE_SOURCE_TYPE
+	default:
+		return 0, errors.New("Unknown ContactsPutResponse_source_type value: " + v)
+	}
+	return &result, nil
+}
+func SerializeContactsPutResponse_source_type(values []ContactsPutResponse_source_type) []string {
+	result := make([]string, len(values))
+	for i, v := range values {
+		result[i] = v.String()
+	}
+	return result
+}
+func (i ContactsPutResponse_source_type) isMultiValue() bool {
+	return false
+}
