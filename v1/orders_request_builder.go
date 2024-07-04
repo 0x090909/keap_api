@@ -164,6 +164,7 @@ func (m *OrdersRequestBuilder) Post(ctx context.Context, body OrdersPostRequestB
 	errorMapping := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.ErrorMappings{
 		"401": CreateOrders401ErrorFromDiscriminatorValue,
 		"403": CreateOrders403ErrorFromDiscriminatorValue,
+		"400": CreateOrders401ErrorFromDiscriminatorValue,
 	}
 	res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, CreateOrdersResponseFromDiscriminatorValue, errorMapping)
 	if err != nil {
