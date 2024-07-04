@@ -3,7 +3,7 @@
   "descriptionLocation": "https://api.infusionsoft.com/info-service/crm/docs/rest/V2",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.13.0",
-  "clientClassName": "KeapClient",
+  "clientClassName": "KeapClientV2",
   "clientNamespaceName": "github.com/0x090909/keap_api",
   "language": "Go",
   "usesBackingStore": false,
