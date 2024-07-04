@@ -13,7 +13,7 @@ type OrdersPostRequestBody struct {
 	// The lead_affiliate_id property
 	lead_affiliate_id *int64
 	// The order_date property
-	order_date *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time
+	order_date *string
 	// The order_items property
 	order_items []OrdersPostRequestBody_order_itemsable
 	// The order_title property
@@ -76,7 +76,7 @@ func (m *OrdersPostRequestBody) GetFieldDeserializers() map[string]func(i878a80d
 		return nil
 	}
 	res["order_date"] = func(n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
-		val, err := n.GetTimeValue()
+		val, err := n.GetStringValue()
 		if err != nil {
 			return err
 		}
@@ -158,7 +158,7 @@ func (m *OrdersPostRequestBody) GetLeadAffiliateId() *int64 {
 
 // GetOrderDate gets the order_date property value. The order_date property
 // returns a *Time when successful
-func (m *OrdersPostRequestBody) GetOrderDate() *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time {
+func (m *OrdersPostRequestBody) GetOrderDate() *string {
 	return m.order_date
 }
 
@@ -207,7 +207,7 @@ func (m *OrdersPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487e
 		}
 	}
 	{
-		err := writer.WriteTimeValue("order_date", m.GetOrderDate())
+		err := writer.WriteStringValue("order_date", m.GetOrderDate())
 		if err != nil {
 			return err
 		}
@@ -273,7 +273,7 @@ func (m *OrdersPostRequestBody) SetLeadAffiliateId(value *int64) {
 }
 
 // SetOrderDate sets the order_date property value. The order_date property
-func (m *OrdersPostRequestBody) SetOrderDate(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time) {
+func (m *OrdersPostRequestBody) SetOrderDate(value *string) {
 	m.order_date = value
 }
 
