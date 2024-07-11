@@ -334,7 +334,7 @@ type OrdersPostRequestBodyable interface {
 	SetOrderType(value *string)
 	SetOrderItems(value []OrdersPostRequestBody_order_itemsable)
 	SetOrderTitle(value *string)
-	GetOrderType(value *string)
+	GetOrderType() *string
 	SetPromoCodes(value []string)
 	SetSalesAffiliateId(value *int64)
 	SetShippingAddress(value OrdersPostRequestBody_shipping_addressable)
