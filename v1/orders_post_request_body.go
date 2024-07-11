@@ -17,12 +17,22 @@ type OrdersPostRequestBody struct {
 	order_items []OrdersPostRequestBody_order_itemsable
 	// The order_title property
 	order_title *string
+	// The order_title property
+	order_type *string
 	// Uses multiple strings as promo codes. The corresponding discount will be applied to the order.
 	promo_codes []string
 	// The sales_affiliate_id property
 	sales_affiliate_id *int64
 	// The shipping_address property
 	shipping_address OrdersPostRequestBody_shipping_addressable
+}
+
+func (m *OrdersPostRequestBody) GetOrderType() *string {
+	return m.order_type
+}
+
+func (m *OrdersPostRequestBody) SetOrderType(order_type *string) {
+	m.order_type = order_type
 }
 
 // NewOrdersPostRequestBody instantiates a new OrdersPostRequestBody and sets the default values.
@@ -200,6 +210,12 @@ func (m *OrdersPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487e
 		}
 	}
 	{
+		err := writer.WriteStringValue("order_type", m.GetOrderType())
+		if err != nil {
+			return err
+		}
+	}
+	{
 		err := writer.WriteInt64Value("lead_affiliate_id", m.GetLeadAffiliateId())
 		if err != nil {
 			return err
@@ -315,8 +331,10 @@ type OrdersPostRequestBodyable interface {
 	SetContactId(value *int64)
 	SetLeadAffiliateId(value *int64)
 	SetOrderDate(value *string)
+	SetOrderType(value *string)
 	SetOrderItems(value []OrdersPostRequestBody_order_itemsable)
 	SetOrderTitle(value *string)
+	GetOrderType(value *string)
 	SetPromoCodes(value []string)
 	SetSalesAffiliateId(value *int64)
 	SetShippingAddress(value OrdersPostRequestBody_shipping_addressable)
